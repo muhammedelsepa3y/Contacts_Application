@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../modules/contact_view/contacts.dart';
@@ -14,6 +16,11 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+    Timer(
+        Duration(seconds: 5),
+            () =>
+            Navigator.of(context).pushReplacement(MaterialPageRoute(
+                builder: (BuildContext context) => UserScreen())));
     return Scaffold(
       body: Center(
         child: Column(
@@ -23,7 +30,7 @@ class _HomeState extends State<Home> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("ii.png",height: 150,width: 150,),
+                  Image.asset("Assets/ii.png",height: 150,width: 150,),
                   SizedBox(height: 45,),
                   Text("Contacts",style: TextStyle(
                       fontSize: 40,
@@ -34,22 +41,7 @@ class _HomeState extends State<Home> {
             ),
 
 
-            Container(
-              width: double.infinity,
-              color: Colors.blue,
-              child: MaterialButton(
-                height: 70,
-                onPressed: () {
-                  setState(() {
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=>UserScreen()));
-                  });
-                },
-                child: Text(
-                  "Start App",
-                  style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold,fontSize: 20),
-                ),
-              ),
-            ),
+
 
 
           ],
