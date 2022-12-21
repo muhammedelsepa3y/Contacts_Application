@@ -30,7 +30,7 @@ class _HomeState extends State<Home> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Image.asset("ii.png",height: 150,width: 150,),
+                  Image.asset("Assets/ii.png",height: 150,width: 150,),
                   SizedBox(height: 45,),
                   Text("Contacts",style: TextStyle(
                       fontSize: 40,
